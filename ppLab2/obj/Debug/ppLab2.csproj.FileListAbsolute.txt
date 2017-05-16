@@ -1,0 +1,14 @@
+D:\develop\pp\lab2\ppLab2\ppLab2\bin\Debug\ppLab2.exe.config
+D:\develop\pp\lab2\ppLab2\ppLab2\bin\Debug\ppLab2.exe
+D:\develop\pp\lab2\ppLab2\ppLab2\bin\Debug\ppLab2.pdb
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2.csprojResolveAssemblyReference.cache
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\MainWindow.g.cs
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\App.g.cs
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2_MarkupCompile.cache
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2_MarkupCompile.lref
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\MainWindow.baml
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2.g.resources
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2.Properties.Resources.resources
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2.csproj.GenerateResource.Cache
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2.exe
+D:\develop\pp\lab2\ppLab2\ppLab2\obj\Debug\ppLab2.pdb
