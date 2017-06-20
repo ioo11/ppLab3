@@ -34,12 +34,21 @@ namespace ppLab2
         {
             InitializeComponent();
 
+            // Здесь программа начинает работу
+
+            // Этот объект отвечает за обновление интерфейса и движение шаров
             UIDispatcher = new DispatcherTimer();
+
+            // Это список всех шаров. В него по нажатию добавляюся новые
             workers = new List<PhysicalCircleWorker>();
+
             random = new Random();
+
+            // Запуск диспетчера
             runUpdateUI();
         }
 
+        // Обработка клика на кнопку
         private void button_Click(object sender, RoutedEventArgs e)
         {
             /*
@@ -50,6 +59,8 @@ namespace ppLab2
                 5) run worker
             */
 
+
+            // Создается новый шар с указанными (случайными) параметрами
             PhysicalCircle circle = new PhysicalCircle(new Ellipse
             {
                 Height = 30,
@@ -60,12 +71,14 @@ namespace ppLab2
                     (byte)random.Next(0, 255))),
             }, new Position(0, 0));
 
+            // Создается объект, который содержит поток для вычисления координат этого шара
             PhysicalCircleWorker worker = new PhysicalCircleWorker(circle, canvas, workers)
             {
                 XSpeed = random.Next(minSpeed, maxSpeed),
                 YSpeed = random.Next(minSpeed, maxSpeed),
             };
 
+            // Отрисовывается шар и запускается поток
             workers.Add(worker);
             canvas.Children.Add(circle.Circle);
 
@@ -74,13 +87,17 @@ namespace ppLab2
 
         private void runUpdateUI()
         {
+            // Задаются параметры диспетчера главного потока, который рисует все шары:
+            // Метод, который будет выполняться в потоке
             UIDispatcher.Tick += new EventHandler(updateUI);
+            // Интервал, с которым он будет повторяться (10мс)
             UIDispatcher.Interval = new TimeSpan(0, 0, 0, 0, 10);
             UIDispatcher.Start();
         }
 
         private void updateUI(object sender, EventArgs e)
         {
+            // Каждый шар отрисовывается
             foreach (PhysicalCircleWorker worker in workers)
                 worker.Circle.Circle.Margin = new Thickness(worker.CurrentPosition.x, worker.CurrentPosition.y, 0, 0);
         }
